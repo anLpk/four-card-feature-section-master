@@ -1,26 +1,60 @@
-* {
-  margin: 0;
-  padding: 0
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* 
+ * Challenge colors, font
+ * 
+ * The font-size for 20px is to make rem clearer for increments
+ *
+ * Mobile: 375px (375x1360)
+ * Desktop: 1440px (1440x922)
+*/
+
+:root {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+    /* Primary Colors */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--veryLightGray);
   font-family: 'Poppins', sans-serif;
 }
 
 .all-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.column {
+  max-width: 400px;
 }
 
 .text {
+  text-align:center;
 }
 
-.tittle {
+.tittle-1 {
   font-weight: 300;
   font-size: 1.8em;
   opacity: .7;
@@ -32,7 +66,7 @@ body {
   opacity: .6;
 }
 
-h5 {
+.title-3 {
   font-weight: 400;
   font-size: .8em;
   opacity: .4;
@@ -46,8 +80,10 @@ h5 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.supervisor>img {
-
+.card-img {
+  display: block;
+  width: 20%;
+  margin-left: auto;
 }
 
 span {
@@ -70,9 +106,6 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.team-builder>img {
-}
-
 .karma {
   background: #ffffff;
   border-top: 3px solid hsl(34, 97%, 64%);
@@ -80,18 +113,12 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.karma>img {
-}
 
 .calculator {
   background: #ffffff;
   border-top: 3px solid hsl(212, 86%, 64%);
   border-radius: .3em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
-}
-
-.calculator>img {
  
 }
 
@@ -117,41 +144,9 @@ a:hover {
 }
 
 @media (min-width: 1000px) {
-  .all-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1rem;
+  .column {
+    width: 75%;
   }
 
-  .text {
-    grid-column: 2/4;
-    grid-row: 1/2;
-  }
-
-  .supervisor {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-
-  .team-builder {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .karma {
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
-
-  .calculator {
-    grid-column: 3/4;
-    grid-row: 3/4;
-  }
-}
 
 @media (max-width: 700px) {
-  .all-container {
-    display: inline-block;
-  }
-}

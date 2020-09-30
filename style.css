@@ -30,10 +30,6 @@
     /* box-sizing: border-box; */
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: var(--veryLightGray);
   font-family: 'Poppins', sans-serif;
@@ -43,11 +39,11 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80%;
+  width: 78%;
 }
 
 .column {
-  max-width: 400px;
+  max-width: 440px;
 }
 
 .text {
@@ -61,7 +57,7 @@ body {
 }
 
 .tittle-2 {
-  font-weight: 600;
+  font-weight: 620;
   font-size: 1.8em;
   opacity: .6;
 }
@@ -149,4 +145,4 @@ a:hover {
   }
 
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
